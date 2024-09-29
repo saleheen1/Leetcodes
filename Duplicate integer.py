@@ -1,16 +1,16 @@
 class Solution:
     def hasDuplicate(self, nums: list[int]) -> bool:
-        dataDict = {}
+        dataSet = set()
         for value in nums:
-            if(dataDict.get(value,0) ==1):
+            if(value in dataSet):
                 return True
-            dataDict[value] = dataDict.get(value, 0) +1;
+            dataSet.add(value)
             
         return False
             
 
 
 solution = Solution()
-print(solution.hasDuplicate( nums=[1,2,3,1]))
+print(solution.hasDuplicate( nums=[1,2,3,5]))
             
          
