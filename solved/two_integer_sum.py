@@ -16,6 +16,6 @@ class Solution:
 
         
 
-solution = Solution();
+solution = Solution()
 res =solution.twoSum(nums = [3,2,4], target=6)
 print(res)
