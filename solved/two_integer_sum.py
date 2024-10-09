@@ -9,9 +9,7 @@ class Solution:
 
         for i in range(len(nums)):
             subtRes =  target - nums[i]
-            # print('current index ',i,'current array value ', nums[i])
             if subtRes in hashData and i != hashData[subtRes]:
-                # print("index is ",hashData[subtRes], "key is ",subtRes)
                 return [i, hashData[subtRes]]
 
         
