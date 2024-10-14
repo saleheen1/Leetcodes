@@ -1,7 +1,8 @@
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
+
         result = []
-        rightM = 1
+        product = 1
 
         for i in range(len(nums)):
             if i==0:
@@ -9,18 +10,20 @@ class Solution:
                 continue
             leftM = nums[i] * result[i-1]
             result.append(leftM)
+
         
         for i in reversed(range(len(nums))):
             if i == len(nums) -1:
                 result[i] = result[i-1]
-                rightM = nums[i]
+                product = nums[i]
                 continue
 
             if i == 0:
-                result[i] = rightM
+                result[i] = product
                 return result
-            result[i] = result[i-1] * rightM
-            rightM = nums[i] * rightM
+            
+            result[i] = result[i-1] * product
+            product = nums[i] * product
             
 
 
