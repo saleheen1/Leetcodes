@@ -3,8 +3,8 @@ class Node:
         self.data = data
         self.next = next
     
-    def  __str__(self):
-        return str(self.data)
+    # def  __str__(self):
+    #     return str(self.data)
     
 
 
@@ -23,5 +23,17 @@ a.next = b
 current = head
 
 while current:
-    print(current)
+    print(current.data)
     current = current.next
+
+
+def searchValue(start,value):
+    current = start
+    while current:
+        if current.data == value:
+            return True
+        current = current.next
+    
+    return False
+
+print(searchValue(start= head,value= 9))
