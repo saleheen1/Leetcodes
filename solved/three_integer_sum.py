@@ -8,7 +8,7 @@ class Solution:
             rightIndex = len(nums) -1
             
 
-            if i > 0 and v == nums[i+1]:
+            if i > 0 and v == nums[i-1]:
                 continue
             
             while leftIndex < rightIndex:

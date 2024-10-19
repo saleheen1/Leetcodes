@@ -11,7 +11,12 @@ class Solution:
                     continue
                 singleRow = "char "+str(char) + " at row " + str(i)
                 singleColumn = "char "+ str(char) + " at column "+str(j)
+
                 boxNumber = str(int(i)/3) + str(int(j)/3)
+                # if don't have to do int(i)/3 or int(j)/3,
+                # In python 3, you can import math 
+                # And then do this: math.ceil(i/3) or math.ceil(j/3)
+                # Which will give you integer value from decimal
                 singleBox = "char "+ str(char) + " at box "+ boxNumber
 
                 if(singleRow in seenRows or singleColumn in seenColums or singleBox in seenBoxes):
