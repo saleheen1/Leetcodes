@@ -14,7 +14,7 @@ class Solution:
         q.append(root)
         res = []
 
-        if not root: return []
+        if not root: return res
 
         while q:
             n = len(q)
