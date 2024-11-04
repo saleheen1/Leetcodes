@@ -1,7 +1,6 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         
-        
         stk =[]
         hashData = {")":"(","}":"{","]":"["}
 
@@ -16,15 +15,6 @@ class Solution:
                     return False
                 
         return not stk
-
-
-
-        
-        
-
-
-
-
 
 
 s = Solution()
