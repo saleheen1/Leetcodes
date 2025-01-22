@@ -19,5 +19,4 @@ class Solution:
 
 
 s = Solution()
-
 print(s.groupAnagrams(strs = ["acct","tcca","tops","cat"]))

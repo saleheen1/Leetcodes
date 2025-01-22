@@ -27,10 +27,5 @@ class Solution:
             
 
 
-
-
-
-
-
 s =Solution()
 print(s.productExceptSelf(nums=[4,3,2,1,2]))

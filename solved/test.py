@@ -1,19 +1,25 @@
 from collections import defaultdict
+class Solution:
+    def longestSeq (self,nums:list[int])->int:
+        if len(nums) == 0:
+            return 0
+        num_set = set(nums)
+        longest = 1
 
-class Solution(object):
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
-        res = defaultdict(list)
-        
-        for word in strs:
-            count = [0] * 26
-            for v in word:
-                count[ord(v) - ord('a')] +=1
-            
-            res[tuple(count)].append(word)
-        return res.values()
+        for v in num_set:
+            long = 1
+            if v -1 in num_set:
+                continue
+            while (v + long) in num_set:
+                long +=1
+                longest = max(longest,long)
+        return longest
 
 
-            
+
+
+
+
 
 s = Solution()
-print(s.groupAnagrams(strs=["act","pots","tops","cat","stop","hat"]))
+print(s.productExceptSelf(nums=[1,2,4,6]))
